@@ -65,7 +65,7 @@ const onUpdateQuote = function (event) {
 const onDeleteQuote = function (event) {
   event.preventDefault()
   const data = getFormFields(this) // this === event.target
-
+  console.log(data)
   api.deleteQuote(data)
     .then(ui.deleteQuoteSuccess)
     .catch(ui.deleteQuoteFailure)
