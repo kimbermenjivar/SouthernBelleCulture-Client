@@ -1,3 +1,4 @@
+.vscode
 tmp
 dist
 vendor.js
@@ -13,7 +14,7 @@ _SpecRunner.html
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 # Thumbnails
 ._
 # Files that might appear in the root of a volume
