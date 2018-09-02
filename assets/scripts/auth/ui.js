@@ -3,14 +3,14 @@ const store = require('../store')
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully')
   $('#message').css('background-color', 'green')
-  console.log('signUpSuccess ran. Data is:', data)
+  // console.log('signUpSuccess ran. Data is:', data)
   $('#sign-up').addClass('hidden')
   store.user = data.user
 }
 const signUpFailure = function (error) {
-  $('#message').text('Error on sign')
+  $('#message').text('Error on sign' + error)
   $('#message').css('background-color', 'red')
-  console.log('signUpFailure ran. Data is:', error)
+  // console.log('signUpFailure ran. Data is:', error)
 }
 
 const signInSuccess = function (data) {
@@ -31,14 +31,14 @@ const signInSuccess = function (data) {
 }
 
 const signInFailure = function (error) {
-  $('#message').text('Error on sign in')
+  $('#message').text('Error on sign in' + error)
   $('#message').css('background-color', 'red')
-  console.log('signInFailure ran. Data is:', error)
+  // console.log('signInFailure ran. Data is:', error)
 }
 const changePasswordSuccess = function (data) {
   $('#message').text('changed password successfully')
   $('#message').css('background-color', 'green')
-  console.log('password changed successfully')
+  // console.log('password changed successfully')
   $('#change-password-form').addClass('hidden')
 }
 const changePasswordFailure = function () {
@@ -47,7 +47,7 @@ const changePasswordFailure = function () {
   // console.log('changePasswordFailure ran. Data is:', error)
 }
 const signOutSuccess = function (data) {
-  console.log('ha')
+  // console.log('ha')
   $('#message').text('Signed out successfully')
   $('#message').css('background-color', 'green')
   $('#sign-out').addClass('hidden')
@@ -63,9 +63,9 @@ const signOutSuccess = function (data) {
   store.user = null
 }
 const signOutFailure = function (error) {
-  $('#message').text('Error on sign Out')
+  $('#message').text('Error on sign Out' + error)
   $('#message').css('background-color', 'red')
-  console.log('signOutFailure ran. Data is:', error)
+  // console.log('signOutFailure ran. Data is:', error)
 }
 const addQuoteSuccess = function (data) {
   $('#message').text('Add quote')
@@ -78,21 +78,21 @@ const addQuoteSuccess = function (data) {
   $('#sign-in').removeClass('hidden')
 }
 const addQuoteFailure = function (error) {
-  $('#message').text('Error Adding Quote')
+  $('#message').text('Error Adding Quote' + error)
   $('#message').css('background-color', 'red')
-  console.log('addQuoteFailure ran. Data is:', error)
+  // console.log('addQuoteFailure ran. Data is:', error)
 }
 const updateQuoteSuccess = function (data) {
   $('#message').text('Updated quote')
   $('#message').css('background-color', 'green')
   $('#update-quote-form')[0].reset()
-  console.log('Updated Quote')
+  // console.log('Updated Quote')
 }
 const searchForQuoteSuccess = function (data) {
   $('.search-results').html('')
   let searchHTML = ''
-  console.log(data)
-  console.log(store)
+  // console.log(data)
+  // console.log(store)
 
   data.southerncultures.forEach((quoteData) => {
     // if (quoteData.user_id === store.user.id) {
@@ -110,9 +110,9 @@ const searchForQuoteSuccess = function (data) {
 }
 
 const updateQuoteFailure = function (error) {
-  $('#message').text('Error on update quote')
+  $('#message').text('Error on update quote' + error)
   $('#message').css('background-color', 'red')
-  console.log('updateFailure ran. Data is:', error)
+  // console.log('updateFailure ran. Data is:', error)
 }
 
 const deleteQuoteSuccess = function (quoteData) {

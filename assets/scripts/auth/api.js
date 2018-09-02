@@ -20,7 +20,7 @@ const signIn = function (data) {
 }
 
 const changePassword = function (data) {
-  console.log('data is ', data)
+  // console.log('data is ', data)
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
@@ -42,7 +42,7 @@ const signOut = function () {
 }
 
 const addQuote = function (data) {
-  console.log('data is ', data)
+  // console.log('data is ', data)
   return $.ajax({
     url: config.apiUrl + '/southerncultures',
     method: 'POST',
@@ -53,7 +53,7 @@ const addQuote = function (data) {
   })
 }
 const deleteQuote = function (data) {
-  console.log(data)
+  // console.log(data)
 
   return $.ajax({
     url: config.apiUrl + '/southerncultures/' + data.southernculture.id,

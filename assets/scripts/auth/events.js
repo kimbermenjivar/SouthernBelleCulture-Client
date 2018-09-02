@@ -7,7 +7,7 @@ const clearTMP = () => {
   $('.search-results').children('div').remove()
 }
 const onSignUp = function (event) {
-  console.log('trying to sign up')
+  // console.log('trying to sign up')
   event.preventDefault()
   const data = getFormFields(this) // this === event.target
   api.signUp(data)
@@ -40,7 +40,7 @@ const showChangePassword = function () {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('Sign out ran!')
+  // console.log('Sign out ran!')
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
@@ -53,10 +53,10 @@ const onAddQuote = function (event) {
     .catch(ui.addQuoteFailure)
 }
 const onUpdateQuote = function (event) {
-  console.log('onUpdateQuote')
+  // console.log('onUpdateQuote')
   event.preventDefault()
   const data = getFormFields(this)
-  console.log(data)
+  // console.log(data)
   api.updateQuote(data)
     .then(ui.updateQuoteSuccess)
     .catch(ui.updateQuoteFailure)
@@ -65,7 +65,7 @@ const onUpdateQuote = function (event) {
 const onDeleteQuote = function (event) {
   event.preventDefault()
   const data = getFormFields(this) // this === event.target
-  console.log(data)
+  // console.log(data)
   api.deleteQuote(data)
     .then(ui.deleteQuoteSuccess)
     .catch(ui.deleteQuoteFailure)
@@ -74,7 +74,7 @@ const onDeleteQuote = function (event) {
 const onSearchForQuote = function (event) {
   clearTMP()
   event.preventDefault()
-  console.log('Search for Quotes ran!')
+  // console.log('Search for Quotes ran!')
   api.searchForQuotes()
     .then(ui.searchForQuoteSuccess)
     .catch(ui.searchForQuoteFailure)
