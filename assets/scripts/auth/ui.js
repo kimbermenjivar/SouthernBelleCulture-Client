@@ -110,7 +110,7 @@ const searchForQuoteSuccess = function (data) {
 }
 
 const updateQuoteFailure = function () {
-  $('#message').text('Error on update quote' +)
+  $('#message').text('Error on update quote')
   $('#message').css('background-color', 'red')
   // console.log('updateFailure ran. Data is:', error)
 }
