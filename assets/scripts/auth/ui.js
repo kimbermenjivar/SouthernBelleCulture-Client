@@ -30,8 +30,8 @@ const signInSuccess = function (data) {
   store.user = data.user
 }
 
-const signInFailure = function (error) {
-  $('#message').text('Error on sign in' + error)
+const signInFailure = function () {
+  $('#message').text('Error on sign in!')
   $('#message').css('background-color', 'red')
   // console.log('signInFailure ran. Data is:', error)
 }
