@@ -7,8 +7,8 @@ const signUpSuccess = function (data) {
   $('#sign-up').addClass('hidden')
   store.user = data.user
 }
-const signUpFailure = function (error) {
-  $('#message').text('Error on sign' + error)
+const signUpFailure = function () {
+  $('#message').text('Error on sign')
   $('#message').css('background-color', 'red')
   // console.log('signUpFailure ran. Data is:', error)
 }
@@ -62,8 +62,8 @@ const signOutSuccess = function (data) {
   $('.search-results').html('')
   store.user = null
 }
-const signOutFailure = function (error) {
-  $('#message').text('Error on sign Out' + error)
+const signOutFailure = function () {
+  $('#message').text('Error on sign Out')
   $('#message').css('background-color', 'red')
   // console.log('signOutFailure ran. Data is:', error)
 }
@@ -77,8 +77,8 @@ const addQuoteSuccess = function (data) {
   $('#sign-out').removeClass('hidden')
   $('#sign-in').removeClass('hidden')
 }
-const addQuoteFailure = function (error) {
-  $('#message').text('Error Adding Quote' + error)
+const addQuoteFailure = function () {
+  $('#message').text('Error Adding Quote')
   $('#message').css('background-color', 'red')
   // console.log('addQuoteFailure ran. Data is:', error)
 }
@@ -109,8 +109,8 @@ const searchForQuoteSuccess = function (data) {
   $('.search-results').append(searchHTML)
 }
 
-const updateQuoteFailure = function (error) {
-  $('#message').text('Error on update quote' + error)
+const updateQuoteFailure = function () {
+  $('#message').text('Error on update quote' +)
   $('#message').css('background-color', 'red')
   // console.log('updateFailure ran. Data is:', error)
 }
