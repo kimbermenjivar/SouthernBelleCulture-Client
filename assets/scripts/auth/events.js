@@ -50,6 +50,9 @@ const onAddQuote = function (event) {
   const data = getFormFields(this) // this === event.target
   api.addQuote(data)
     .then(ui.addQuoteSuccess)
+    .then(() => {
+      $('#add-quote')[0].reset()
+    })
     .catch(ui.addQuoteFailure)
 }
 const onUpdateQuote = function (event) {
@@ -59,15 +62,21 @@ const onUpdateQuote = function (event) {
   // console.log(data)
   api.updateQuote(data)
     .then(ui.updateQuoteSuccess)
+    .then(() => {
+      $('#update-quote-form')[0].reset()
+    })
     .catch(ui.updateQuoteFailure)
 }
 
-const onDeleteQuote = function (event) {
+const onDeleteQuote = function () {
   event.preventDefault()
   const data = getFormFields(this) // this === event.target
   // console.log(data)
   api.deleteQuote(data)
     .then(ui.deleteQuoteSuccess)
+    .then(() => {
+      $('#delete-quote')[0].reset()
+    })
     .catch(ui.deleteQuoteFailure)
 }
 
@@ -77,6 +86,9 @@ const onSearchForQuote = function (event) {
   // console.log('Search for Quotes ran!')
   api.searchForQuotes()
     .then(ui.searchForQuoteSuccess)
+    .then(() => {
+      $('#search-for-quotes')[0].reset()
+    })
     .catch(ui.searchForQuoteFailure)
 }
 const addHandlers = () => {

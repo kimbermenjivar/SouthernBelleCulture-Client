@@ -110,15 +110,16 @@ const searchForQuoteSuccess = function (data) {
 }
 
 const updateQuoteFailure = function () {
-  $('#message').text('Error on update quote')
+  $('#message').text('Oh my! You cant update a quote thats not yours')
   $('#message').css('background-color', 'red')
   // console.log('updateFailure ran. Data is:', error)
 }
 
-const deleteQuoteSuccess = function (quoteData) {
+const deleteQuoteSuccess = function (data) {
   $('#message').text('Deleted Successfully')
   $('#message').css('background-color', 'green')
-  $('.delete-results').html('')
+  $('.delete-quote')[0].reset()
+
   // let searchHTML = ''
   // data.southerncultures.forEach((user) => {
   //   searchHTML += `<div>
@@ -130,6 +131,11 @@ const deleteQuoteSuccess = function (quoteData) {
   // })
   // $('.delete-results').append(searchHTML)
   $('#delete-quote')[0].reset()
+}
+const deleteQuoteFailure = function () {
+  $('#message').text('Bless your heart, you cant delete a quote that you didnt add')
+  $('#message').css('background-color', 'red')
+  // console.log('deleteFailure ran. Data is:', error)
 }
 module.exports = {
   signUpSuccess,
@@ -144,6 +150,7 @@ module.exports = {
   addQuoteFailure,
   searchForQuoteSuccess,
   deleteQuoteSuccess,
+  deleteQuoteFailure,
   updateQuoteSuccess,
   updateQuoteFailure
 }

@@ -53,7 +53,7 @@ const addQuote = function (data) {
   })
 }
 const deleteQuote = function (data) {
-  // console.log(data)
+  console.log('data is', data)
 
   return $.ajax({
     url: config.apiUrl + '/southerncultures/' + data.southernculture.id,
