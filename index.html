@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default hidden" id="navbar">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <h1 class="title">Southern Belle Culture</h1>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="true">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse show" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+
+            <li>
+              <a id="show-change-password" href="#">Change Password</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a id="sign-out" href="#">Sign Out</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="dropdown-menu">
+
+            <li>
+              <a id="show-change-password" href="#">Change Password</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a id="sign-out" href="#">Sign Out</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- <ul class="dropdown-menu">
+
+            <li>
+              <a id="show-change-password" href="#">Change Password</a>
+            </li>
+            <li role="separator" class="divider"></li>
+            <li>
+              <a id="sign-out" href="#">Sign Out</a>
+            </li>
+          </ul>
+        </li>
+      </ul> -->
+
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+
+<div class="container">
+    <div id="message"></div>
+    <div class="auth">
+      <h1>Sign Up</h1>
+      <form id="sign-up">
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <BR>
+        <input type="password" name="credentials[password]" placeholder="Password">
+        <BR>
+        <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <BR>
+        <input type="submit" value="Sign up!">
+      </form>
+      <BR>
+      <h1>Sign In</h1>
+      <form id="sign-in">
+        <input type="text" name="credentials[email]" placeholder="Email">
+        <input type="password" name="credentials[password]" placeholder="Password">
+        <input type="submit" value="Sign in!">
+      </form>
+    </div>
+
+    <div class="hidden" id="change-password-form">
+      <form>
+        <input type="password" name="passwords[old]" placeholder="Current Password" required>
+        <input type="password" name="passwords[new]" placeholder="New Password" required>
+        <input type="submit" value="Change Password">
+      </form>
+    </div>
+
+    <form id="add-quote" class="hidden">
+      <input type="text" name="southernculture[quote]" placeholder="Quote">
+      <input type="text" name="southernculture[about]" placeholder="About">
+      <input type="text" name="southernculture[image]" placeholder="Image">
+      <input type="submit" value="Add Quote">
+    </form>
+
+    <form id="search-for-quotes" class="hidden">
+      <input type="submit" name="user[id]" value="Search For Quote">
+    </form>
+
+    <form class='hidden' id='update-quote-form'>
+      <input type="text" name="southernculture[id]" placeholder="id" required>
+      <br>
+      <input type="text" name="southernculture[about]" placeholder="About" required>
+      <br>
+      <input type="text" name="southernculture[quote]" placeholder="Quote" required>
+      <br>
+      <input type="text" name="southernculture[image]" placeholder="Image" required>
+      <br>
+      <input type="submit" value="Update Quote">
+    </form>
+
+    <form id="delete-quote" class="hidden">
+      <input type="text" name="southernculture[id]" placeholder="id">
+      <input type="submit" value="Delete A Quote">
+    </form>
+
+    <div class="search-results"></div>
+
+</body>
+
+</html>
